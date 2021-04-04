@@ -79,6 +79,11 @@
           awesome-vue
         </a>
       </li>
+      <li>
+        <button @click="onClickHome">
+          HOME
+        </button>
+      </li>
     </ul>
   </div>
 </template>
@@ -89,6 +94,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    onClickHome () {
+      this.$router.push('/home');
     }
   }
 }
