@@ -5,7 +5,7 @@
             </h1>
         </div>
         <div class="container">
-            <button>{{ input }}</button>
+            <button @click="onClickInput">{{ input }}</button>
         </div>
     </div>
     
@@ -18,7 +18,13 @@ export default {
             title: "Account Book",
             input: "入力"
         }
+    },
+    methods: {
+        onClickInput() {
+            this.$router.push('/inputDetail')
+        }
     }
+
 }
 </script>
 <style scoped>
