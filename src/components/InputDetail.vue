@@ -15,6 +15,20 @@
                     <option v-for="c in categories" :key="c" value="">{{ c }}</option>
                 </select>
             </div>
+            <div>
+                <label for="">コメント</label>
+                <input type="text" v-model="comment">
+            </div>
+            <div>
+                <button @click="onClickSave">
+                    保存
+                </button>
+            </div>
+            <div>
+                <button @click="onClickNewInput">
+                    綺麗な入力画面
+                </button>
+            </div>
         </div>
     </div>
     
@@ -34,7 +48,16 @@ export default {
                 "交際費",
                 "交通費",
                 "光熱費"
-            ]
+            ],
+            comment: ""
+        }
+    },
+    methods: {
+        onClickSave() {
+            this.$router.push("/")
+        },
+        onClickNewInput() {
+            this.$router.push("/newInputDetail")
         }
     }
 }
