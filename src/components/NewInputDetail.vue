@@ -5,6 +5,7 @@
                 <div class="box expense-list-box">
                     <div class="title-box">
                         <h1 class="title">家計簿</h1>
+                        <input-expense />
                     </div>
                 </div>
             </div>
@@ -13,8 +14,14 @@
     </div>  
 </template>
 <script>
+// import InputExpense from '@components/InputExpense';
+import InputExpense from './InputExpense.vue';
+
 export default {
     name: "NewInputDetail",
+    components: {
+        'input-expense': InputExpense,
+    },
     data () {
         return {
             title: "NEW詳細入力",
