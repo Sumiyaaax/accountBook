@@ -28,6 +28,14 @@
             class="input"
             v-model="inputDate">
         </div>
+        <div>
+            <label for="">メモ</label>
+            <textarea name="" id="" cols="40" rows="10"></textarea>
+        </div>
+        <div>
+            <button @click="onClickCancel">キャンセル</button>
+            <button @click="onClickSave">保存</button>
+        </div>
     </form>
     
 </template>
@@ -49,7 +57,18 @@ export default {
                 "光熱費"
             ],
         }
-    }    
+    },
+    methods: {
+        onClickCancel() {
+            this.$router.push('/')
+        },
+        onClickSave() {
+            this.inputTitle = ""
+            this.inputAmount = ""
+            this.inputCategory = ""
+            this.inputDate = ""
+        }
+    }
 }
 </script>
 <style scoped>
